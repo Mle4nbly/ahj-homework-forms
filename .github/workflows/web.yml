@@ -41,7 +41,8 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm install
-      - run: npm run test
+      - run: npm run build:serve
+      - run: npm run e2e
 
   build:
     needs: [eslint, test]
